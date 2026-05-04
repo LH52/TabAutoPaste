@@ -12,7 +12,7 @@ def press_tab():
     pyautogui.keyUp('v')
     
     text = pyperclip.paste()
-    values = text.split('#separator#')
+    values = text.split('#sep#')
     for i in range(0, len(values)):
         
         pyautogui.write(values[i])  # interval prevents skipping
@@ -34,6 +34,6 @@ window = tk.Tk()
 window.title("GP Paster")
 
 btn = tk.Button(window, text="Play", command=toggle_play_pause)
-btn.pack(pady=10)
+btn.pack(pady=10, padx=140)
 
 window.mainloop()
